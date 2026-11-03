@@ -1,7 +1,5 @@
+import cs2030s.fp.InfiniteList;
 import cs2030s.fp.Maybe;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.IntStream;
 
 /**
  * Queries on room schedules.
@@ -13,12 +11,12 @@ public class RoomPlanner {
     return Maybe.none();
   }
 
-  public static List<String> availableRooms(Schedule schedule, List<String> rooms,
-      int start, int end) {
-    return List.of();
+  public static InfiniteList<String> availableRooms(Schedule schedule,
+      InfiniteList<String> rooms, int start, int end) {
+    return InfiniteList.sentinel();
   }
 
-  public static List<Integer> turnaroundTimes(Schedule schedule, String room) {
-    return List.of();
+  public static Schedule intersections(Schedule first, Schedule second) {
+    return new Schedule(InfiniteList.sentinel());
   }
 }
